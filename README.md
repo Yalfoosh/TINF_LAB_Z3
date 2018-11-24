@@ -39,7 +39,7 @@ Here is an example of valid input:
 <c> 1/4
 ```
   
-Additionally, since I've noticed that input checking is a must, I have added input normalization - if the program detects that the probability sum of the random variable created upon input description is not equal to 1, it will ask the user whether or not he wants to normalize it. If yes, the program divides every value by the probability sum, so the new probability sum is closer to 1 than the previous one, if not exactly one (you have to take into account rounding errors which are even present in decimal, a 128-bit real number. If you choose not to normalize the values, the program will display a message that the sum of probabilities is not one and will offer you to enter a new input description.
+Additionally, since I've noticed that input checking is a must, I have added input normalization - if the program detects that the probability sum of the random variable created upon input description is not equal to 1, it will ask the user whether or not he wants to normalize it. If yes, the program divides every value by the probability sum, so the new probability sum is closer to 1 than the previous one, if not exactly 1.00 (you have to take into account rounding errors which are even present in decimal, a 128-bit real number). If you choose not to normalize the values, the program will display a message that the sum of probabilities is not 1 and will offer you to enter a new input description.
 
 ## Final words for input
 
@@ -91,7 +91,7 @@ A slightly more complex output for the string
 Peter Piper picked a a peck of pickled peppers, a peck of picked peppers Peter Piper Picked. If Peter Piper picked a peck of pickled peppers, where's the peck of pickled peppers Peter Piper picked?
 ```
 
-would be this:
+after accepting normalization would be this:
 
 ```
 The given description is as follows:
