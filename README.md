@@ -85,3 +85,67 @@ Median code word length = 2,400
 Code efficiency: 96,747%
 ----------------------------------------------------------------------
 ```
+
+A slightly more complex output for the string
+```
+Peter Piper picked a a peck of pickled peppers, a peck of picked peppers Peter Piper Picked. If Peter Piper picked a peck of pickled peppers, where's the peck of pickled peppers Peter Piper picked?
+```
+
+would be this:
+
+```
+The given description is as follows:
+
+<e>    0,178
+< >    0,173
+<p>    0,137
+<r>    0,066
+<c>    0,061
+<i>    0,061
+<k>    0,061
+<P>    0,046
+<d>    0,041
+<f>    0,025
+<s>    0,025
+<t>    0,025
+<a>    0,020
+<o>    0,020
+<l>    0,015
+<,>    0,010
+<h>    0,010
+<'>    0,005
+<.>    0,005
+<?>    0,005
+<I>    0,005
+<w>    0,005
+
+For the given description, the Shannon Fano code is:
+
+----------------------------------------------------------------------
+<e>    ->    00
+< >    ->    010
+<p>    ->    011
+<r>    ->    1000
+<c>    ->    1001
+<i>    ->    1010
+<k>    ->    1011
+<P>    ->    11000
+<d>    ->    11001
+<f>    ->    11010
+<s>    ->    11011
+<t>    ->    11100
+<a>    ->    111010
+<o>    ->    111011
+<l>    ->    111100
+<,>    ->    111101
+<h>    ->    1111100
+<'>    ->    1111101
+<.>    ->    11111100
+<?>    ->    11111101
+<I>    ->    11111110
+<w>    ->    11111111
+
+Median code word length = 3,756
+Code efficiency: 98,836%
+----------------------------------------------------------------------
+```
