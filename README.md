@@ -41,6 +41,17 @@ Here is an example of valid input:
   
 Although the program should check whether or not the input is valid and normalize it, it does not, since it's expected that the user takes care of that.
 
+##Final words for input
+
+Since the input reads both command line entries and whole file loaded into the stdin, it accepts ends as both EOF and "" read on a line. As such, this usually means that while files loaded into stdin are going to give you a result instantly, loading data through the command line will require you to enter an empty line and the initial data.
+
+To clarify, this means that if you want to enter `abcde` through the command line window, you will actually have to enter
+
+```
+abcde
+
+```
+
 # Output
 
 The output is as follows:
@@ -52,13 +63,24 @@ The output is as follows:
 An example of output for `abcde` is as follows:
 
 ```
-<a> 0.2
-<b> 0.2
-<c> 0.2
-<d> 0.2
-<e> 0.2
+The given description is as follows:
 
-The Shannon-Fano code is as follows:
+<a>    0,200
+<b>    0,200
+<c>    0,200
+<d>    0,200
+<e>    0,200
 
+For the given description, the Shannon Fano code is:
 
+----------------------------------------------------------------------
+<a>    ->    00
+<b>    ->    01
+<c>    ->    10
+<d>    ->    110
+<e>    ->    111
+
+Median code word length = 2,400
+Code efficiency: 96,747%
+----------------------------------------------------------------------
 ```
