@@ -19,6 +19,12 @@ namespace TINF_Lab.GeneralClasses
                 Input = sample.Trim().StartsWith("<")
                     ? new RandomVariable<char>(ParseValues(sample))
                     : new RandomVariable<char>(ParseFromSample(sample));
+
+                if (RandomVariable<char>.TotalProbability(Input) != 1M)
+                    if (Global.NormalizeInput())
+                        Input.Normalize();
+                    else
+                        throw new ArgumentException(Global.RV_INVALID_PROBABILITY_SUM_EXCEPTION);
             }
 
         #endregion

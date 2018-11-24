@@ -235,6 +235,11 @@
             Method that removes the stochastic element with the highest probability.
             </summary>
         </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.Normalize">
+            <summary>
+            Method that normalizes the RandomVariable to have the total probability sum of 1.
+            </summary>
+        </member>
         <member name="P:TINF_Lab.StatisticsClasses.RandomVariable`1.Count">
             <summary>
             Method that returns the number of stochastic elements in this RandomVariable instance.

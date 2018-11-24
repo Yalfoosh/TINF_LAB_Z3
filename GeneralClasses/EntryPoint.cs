@@ -82,6 +82,7 @@ namespace TINF_Lab.GeneralClasses
             }
             catch (ArgumentException ae)
             {
+                Console.Clear();
                 Console.WriteLine(ae.Message);
             }
             

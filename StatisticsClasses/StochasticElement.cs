@@ -5,7 +5,7 @@ namespace TINF_Lab.StatisticsClasses
     public class StochasticElement<T>
     {
         public T Value { get; }
-        public decimal Probability { get; }
+        public decimal Probability { get; set; }
 
         #region Constructors
 

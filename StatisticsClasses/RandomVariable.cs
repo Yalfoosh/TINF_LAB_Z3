@@ -52,7 +52,19 @@ namespace TINF_Lab.StatisticsClasses
                     if (toRem != null && toRem.Count > 0 && toRem[0] != null)
                         _elements.Remove(toRem[0]);
                     else
-                        Console.Error.WriteLine("{0} {1}", Global.RV_REMOVE_NONEXISTING_ELEMENT_EXCEPTION, GetHashCode());
+                        Console.Error.WriteLine("{0} {1}", Global.RV_REMOVE_NONEXISTENT_ELEMENT_EXCEPTION, GetHashCode());
+                }
+
+                /// <summary>
+                /// Method that normalizes the RandomVariable to have the total probability sum of 1.
+                /// </summary>
+                public void Normalize()
+                {
+                    var tp = TotalProbability(this);
+                    
+                    if(tp != 1M)
+                        foreach (var x in _elements)
+                            x.Probability /= tp;
                 }
     
             #endregion
@@ -86,7 +98,7 @@ namespace TINF_Lab.StatisticsClasses
                 /// </summary>
                 /// <param name="rv">The random variable which to calculate the sum of probability from.</param>
                 /// <returns></returns>
-                private static decimal TotalProbability(RandomVariable<T> rv)
+                public static decimal TotalProbability(RandomVariable<T> rv)
                 {
                     var toRet = 0M;
                     

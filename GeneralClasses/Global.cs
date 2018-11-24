@@ -1,10 +1,16 @@
 ﻿// ReSharper disable InconsistentNaming
 
+using System;
+
 namespace TINF_Lab.GeneralClasses
 {
     public static class Global
     {
         #region Strings
+
+            private const string INPUT_NOT_NORMALIZED_STRING =
+                "The input isn't normalized. This can happen even if you type in exact fractions due to rounding errors. " +
+                "Do you want to normalize the random variables (type y if yes)?\n";
 
             #region EntryPoint
     
@@ -79,13 +85,24 @@ namespace TINF_Lab.GeneralClasses
     
             #endregion
 
-            #region RandomValue
+            #region RandomVariable
     
-                public const string RV_REMOVE_NONEXISTING_ELEMENT_EXCEPTION =
-                    "Trying to remove an unexisting element from random variable";
+                public const string RV_REMOVE_NONEXISTENT_ELEMENT_EXCEPTION =
+                    "Trying to remove an nonexistent element from random variable";
+
+                public const string RV_INVALID_PROBABILITY_SUM_EXCEPTION =
+                    "The probability sum of the random variable is invalid. You can enter a new description.";
     
             #endregion
         
         #endregion
+
+        public static bool NormalizeInput()
+        {
+            Console.WriteLine(INPUT_NOT_NORMALIZED_STRING);
+            var read = Console.ReadLine();
+
+            return read == "y" || read == "Y";
+        }
     }
 }
