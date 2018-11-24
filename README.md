@@ -39,7 +39,7 @@ Here is an example of valid input:
 <c> 1/4
 ```
   
-Although the program should check whether or not the input is valid and normalize it, it does not, since it's expected that the user takes care of that.
+Additionally, since I've noticed that input checking is a must, I have added input normalization - if the program detects that the probability sum of the random variable created upon input description is not equal to 1, it will ask the user whether or not he wants to normalize it. If yes, the program divides every value by the probability sum, so the new probability sum is closer to 1 than the previous one, if not exactly one (you have to take into account rounding errors which are even present in decimal, a 128-bit real number. If you choose not to normalize the values, the program will display a message that the sum of probabilities is not one and will offer you to enter a new input description.
 
 ## Final words for input
 
