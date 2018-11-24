@@ -149,3 +149,7 @@ Median code word length = 3,756
 Code efficiency: 98,836%
 ----------------------------------------------------------------------
 ```
+
+# Executable
+
+For windows folk, I always build the .exe in the bin/Release folder. It's on .NET 4.7.2, and it's C# 7.1. People with other OS' will need to build this for themselves. I recommend JetBrains Rider.
