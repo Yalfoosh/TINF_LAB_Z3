@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ShannonFanoCoder</name>
+    </assembly>
+    <members>
+        <member name="M:TINF_Lab.InputDescription.#ctor(System.String)">
+            <summary>
+            Constructor for InputDescription.
+            </summary>
+            <param name="sample">The sample string containing the input description.</param>
+        </member>
+        <member name="M:TINF_Lab.InputDescription.ParseFromSample(System.String)">
+            <summary>
+            Method that parses the input description from a textual sample of a message.
+            </summary>
+            <param name="sample">The string representation of a message.</param>
+            <returns>A hashset of stochastic elements representing the input description of the message.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when sample is not in the correct format.</exception>
+        </member>
+        <member name="M:TINF_Lab.InputDescription.ParseValues(System.String)">
+            <summary>
+            Method that parses the input description from a set of delimited stochastic elements.
+            </summary>
+            <param name="values">The stochastic elements delimited by a semicolon.</param>
+            <returns>A hashset of stochastic elements representing the input description of a given system.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the format of the description is invalid.</exception>
+        </member>
+        <member name="M:TINF_Lab.InputDescription.GetOrdered(System.Boolean)">
+            <summary>
+            Method that gets the ordered stochastic elements, by default with descending probabilities.
+            </summary>
+            <param name="ascendingProbability">True if this should return ascending probabilities, false otherwise.</param>
+            <returns>The list of stochastic elements ordered by probability.</returns>
+        </member>
+        <member name="M:TINF_Lab.EntryPoint.Help">
+            <summary>
+            Method that prints out the help dialogue in console.
+            </summary>
+        </member>
+        <member name="M:TINF_Lab.EntryPoint.Exit(System.Int32)">
+            <summary>
+            Method that exits the program with the exit code exitCode (default 0).
+            </summary>
+            <param name="exitCode">The exit code you wish to exit the program with.</param>
+        </member>
+        <member name="M:TINF_Lab.EntryPoint.AwaitCommand">
+            <summary>
+            Method that listens to the user and does a command when it recognises it.
+            </summary>
+            <returns>The input description if one is entered.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.#ctor(TINF_Lab.ShannonFanoClasses.Group{`0})">
+            <summary>
+            Constructor for CodeClass.
+            </summary>
+            <param name="group">The group which you can make the starting Code Class with.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.#ctor(System.Collections.Generic.IEnumerable{TINF_Lab.ShannonFanoClasses.CodeEntry{`0}})">
+            <summary>
+            Constructor for CodeClass.
+            </summary>
+            <param name="codes">Any kind of CodeEntry collection you can fill the code entries with.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.Entropy">
+            <summary>
+            Method that returns the entropy of the random variable contained in this code class.
+            </summary>
+            <returns>The entropy of the random variable contained in this code class.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.Length">
+            <summary>
+            Method that returns the median length of the current code class instance.
+            </summary>
+            <returns>Median code length of the current code class instance.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.GetOrdered(System.Boolean)">
+            <summary>
+            Method that returns the ordered list of code entries for the current code class instance.
+            </summary>
+            <param name="ascending">True if ordered by ascending probabilities, false otherwise.</param>
+            <returns>The ordered list of code entries contained in this code class instance.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.GetCode(TINF_Lab.ShannonFanoClasses.Group{`0},TINF_Lab.ShannonFanoClasses.CodeClass{`0})">
+            <summary>
+            Static method that returns a coded code class for a certain group. Is recursive.
+            </summary>
+            <param name="group">The group which you want to code for.</param>
+            <param name="currentClass">The instance of the code class so far. Is null if you just began coding.</param>
+            <returns>The resulting coded CodeClass instance.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.Add(TINF_Lab.ShannonFanoClasses.CodeEntry{`0})">
+            <summary>
+            Method that adds a code entry to this code class instance.
+            </summary>
+            <param name="toAdd">Code entry to add.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.AppendAll(System.Boolean)">
+            <summary>
+            Appends a value to all code entries in this code class instance.
+            </summary>
+            <param name="isOne">True if you want to append a 1, false for 0.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.GetSpliced(TINF_Lab.ShannonFanoClasses.Group{`0})">
+            <summary>
+            Method that spliced the current code class instance and makes a new one with only group members present.
+            </summary>
+            <param name="group">The only stochastic elements you want to have in your new code class.</param>
+            <returns>A new code class containing only the stochastic elements found in group.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.Merge(TINF_Lab.ShannonFanoClasses.CodeClass{`0},TINF_Lab.ShannonFanoClasses.CodeClass{`0})">
+            <summary>
+            Method that merges two code class instances into one. Order is irrelevant.
+            </summary>
+            <param name="first">The first code class instance.</param>
+            <param name="second">The second code class instance.</param>
+            <returns>The new code class instance having members both from the first and the second.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeEntry`1.#ctor(TINF_Lab.ShannonFanoClasses.CodeEntry{`0})">
+            <summary>
+            Constructor for CodeEntry, deep copy.
+            </summary>
+            <param name="toCopy">The code entry instance which to deep copy into this.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeEntry`1.#ctor(TINF_Lab.StatisticsClasses.StochasticElement{`0},TINF_Lab.StatisticsClasses.LargePhrase)">
+            <summary>
+            Constructor for CodeEntry.
+            </summary>
+            <param name="element">The stochastic element for the entry.</param>
+            <param name="phrase">The code for the given stochastic element, can be null.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.CodeEntry`1.Influence">
+            <summary>
+            Method that returns the influence of a stochastic element. In other words, it's the median length of a sign.
+            </summary>
+            <returns>The median length of a sign contained in this code entry's stochastic variable.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.Group`1.#ctor(TINF_Lab.ShannonFanoClasses.Group{`0})">
+            <summary>
+            Constructor for Group, deep copy.
+            </summary>
+            <param name="toCopy">The Group instance to deep copy.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.Group`1.#ctor(System.Collections.Generic.IEnumerable{TINF_Lab.StatisticsClasses.StochasticElement{`0}})">
+            <summary>
+            Constructor for Group.
+            </summary>
+            <param name="elements">The collection of stochastic elements to make up the Group.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.Group`1.#ctor(TINF_Lab.StatisticsClasses.RandomVariable{`0})">
+            <summary>
+            Constructor for Group.
+            </summary>
+            <param name="rv">The random variable which to translate into a Group.</param>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoClasses.Group`1.SplitIntoTwo">
+            <summary>
+            Method that splits the Group into two groups of roughly the same probability sum.
+            </summary>
+            <returns>The list of Groups with 2 elements, each of which represents a 0-group and a 1-group.</returns>
+        </member>
+        <member name="M:TINF_Lab.ShannonFanoCoder.#ctor(TINF_Lab.InputDescription)">
+            <summary>
+            Constructor for the Shannon Fano Coder.
+            </summary>
+            <param name="description">The input description you're going to be coding for.</param>
+            <exception cref="T:System.ArgumentNullException">Throws if the input description is null.</exception>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.LargePhrase.#ctor(TINF_Lab.StatisticsClasses.LargePhrase)">
+            <summary>
+            Constructor for LargePhrase, deep copy.
+            </summary>
+            <param name="toCopy">The LargePhrase instance which to deep copy.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.LargePhrase.#ctor(System.String)">
+            <summary>
+            Constructor for LargePhrase.
+            </summary>
+            <param name="bytes">The string representation of bytes the large phrase instance should have.</param>
+        </member>
+        <member name="P:TINF_Lab.StatisticsClasses.LargePhrase.Length">
+            <summary>
+            Method that returns the length of the code in this phrase.
+            </summary>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.LargePhrase.Append(System.Boolean)">
+            <summary>
+            Method that appends a value to the current large phrase instance.
+            </summary>
+            <param name="isOne">True if you want to append 1, false for 0.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.LargePhrase.Compare(TINF_Lab.StatisticsClasses.LargePhrase,TINF_Lab.StatisticsClasses.LargePhrase)">
+            <summary>
+            Static method that compares two LargePhrase instances.
+            </summary>
+            <param name="x">The first LargePhrase instance.</param>
+            <param name="y">The seconds LargePhrase instance.</param>
+            <returns>1 if x is greater than y, -1 if x is less than y, 0 if they're equal.</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.LargePhrase.CompareTo(TINF_Lab.StatisticsClasses.LargePhrase)">
+            <inheritdoc />
+            <summary>
+            Method that compares the current LargePhrase instance with other.
+            </summary>
+            <param name="other">The LargePhrase instance to compare the current instance with.</param>
+            <returns>1 if this is greater than other, -1 if this is less than other, 0 if they're equal.</returns>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.#ctor(TINF_Lab.StatisticsClasses.RandomVariable{`0})">
+            <summary>
+            Constructor for RandomVariable, deep copy.
+            </summary>
+            <param name="other">The random variable which to create a deep copy from.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.#ctor(System.Collections.Generic.IEnumerable{TINF_Lab.StatisticsClasses.StochasticElement{`0}})">
+            <summary>
+            Constructor for RandomVariable
+            </summary>
+            <param name="set">A collection containing the stochastic elements you want to put into this RandomVariable.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.Add(TINF_Lab.StatisticsClasses.StochasticElement{`0})">
+            <summary>
+            Method that adds a stochastic element to this RandomVariable instance.
+            </summary>
+            <param name="toAdd">The stochastic element to add.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.Remove(TINF_Lab.StatisticsClasses.StochasticElement{`0})">
+            <summary>
+            Method that removes a stochastic element for this RandomVariable instance.
+            </summary>
+            <param name="toRemove">The stochastic variable to remove.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.RemoveHighest">
+            <summary>
+            Method that removes the stochastic element with the highest probability.
+            </summary>
+        </member>
+        <member name="P:TINF_Lab.StatisticsClasses.RandomVariable`1.Count">
+            <summary>
+            Method that returns the number of stochastic elements in this RandomVariable instance.
+            </summary>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.GetOrdered(System.Boolean)">
+            <summary>
+            Method that returns the list of ordered stochastic elements.
+            </summary>
+            <param name="ascendingProbability">True if you want it ordered by ascending probability, false otherwise.</param>
+            <returns>The list of stochastic elements ordered by probability.</returns>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.TotalProbability(TINF_Lab.StatisticsClasses.RandomVariable{`0})">
+            <summary>
+            Static method that returns the sum of probabilities from rv.
+            </summary>
+            <param name="rv">The random variable which to calculate the sum of probability from.</param>
+            <returns></returns>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.RandomVariable`1.ProbabilityDifference(TINF_Lab.StatisticsClasses.RandomVariable{`0},TINF_Lab.StatisticsClasses.RandomVariable{`0})">
+            <summary>
+            Static method that returns the probability difference between two random variables. Order is irrelevant.
+            </summary>
+            <param name="first">The first random variable.</param>
+            <param name="second">The second random variable.</param>
+            <returns>The decimal representation of the difference in first and second's probability sum.</returns>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.StochasticElement`1.#ctor(TINF_Lab.StatisticsClasses.StochasticElement{`0})">
+            <summary>
+            Constructor for StochasticElement, deep copy.
+            </summary>
+            <param name="toCopy">The stochastic element instance which to deep copy from.</param>
+        </member>
+        <member name="M:TINF_Lab.StatisticsClasses.StochasticElement`1.#ctor(`0,System.Decimal)">
+            <summary>
+            Constructor for StochasticElement.
+            </summary>
+            <param name="value">The value of the stochastic element.</param>
+            <param name="probability">The probability the stochastic element should have.</param>
+        </member>
+    </members>
+</doc>

@@ -74,6 +74,7 @@ namespace TINF_Lab
             {
                 var coder = new ShannonFanoCoder(new InputDescription(read));
                 
+                Console.Clear();
                 Console.WriteLine(Global.EP_GIVEN_DESCRIPTION_STRING + "\n");
                 Console.WriteLine(coder.Description);
                 Console.WriteLine(Global.EP_SHANNON_FANO_CODE_IS_STRING + "\n");

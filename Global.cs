@@ -33,7 +33,7 @@ namespace TINF_Lab
         
                 public const string EP_INPUT_DESCRIPTION_FINAL =
                     "\n\nBefore you finalize your input description, you can bring this text back by typing \"-help\".\n" +
-                    "To exit the program type \"-exit\"";
+                    "To exit the program type \"-exit\".";
         
                 public const string EP_GIVEN_DESCRIPTION_STRING = "The given description is as follows:";
                 public const string EP_SHANNON_FANO_CODE_IS_STRING = "For the given description, the Shannon Fano code is:";
