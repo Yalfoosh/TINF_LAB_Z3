@@ -37,6 +37,9 @@ namespace TINF_Lab
         
                 public const string EP_GIVEN_DESCRIPTION_STRING = "The given description is as follows:";
                 public const string EP_SHANNON_FANO_CODE_IS_STRING = "For the given description, the Shannon Fano code is:";
+
+                public const string EP_HELP_COMMAND_STRING = "-help\n";
+                public const string EP_EXIT_COMMAND_STRING = "-exit\n";
     
             #endregion
 

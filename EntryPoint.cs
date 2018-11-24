@@ -22,9 +22,10 @@ namespace TINF_Lab
         }
 
         /// <summary>
-        /// Method that exits the program with exit code 0.
+        /// Method that exits the program with the exit code exitCode (default 0).
         /// </summary>
-        private static void Exit() => Environment.Exit(0);
+        /// <param name="exitCode">The exit code you wish to exit the program with.</param>
+        private static void Exit(int exitCode = 0) => Environment.Exit(exitCode);
 
         /// <summary>
         /// Method that listens to the user and does a command when it recognises it.
@@ -48,12 +49,12 @@ namespace TINF_Lab
                 buffer += line + "\n";
 
                 //Check if a specific console command has been called.
-                if (buffer == "-help\n")
+                if (buffer == Global.EP_HELP_COMMAND_STRING)
                 {
                     Help();
                     buffer = "";
                 }
-                else if(buffer == "-exit\n")
+                else if(buffer == Global.EP_EXIT_COMMAND_STRING)
                     Exit();
             }
 
