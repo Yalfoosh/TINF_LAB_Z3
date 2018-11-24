@@ -25,9 +25,10 @@ The user enters a string that statistically represents the model of the coder in
 
 The user can enter the description of the input in a format similar to the one above. The rules are as follows:
 
-- Each stochastic element is delimited by a semicolon (";").
+- Each stochastic element is delimited by a semicolon (`;`).
 - Each stochastic element has exactly one char as the value and a number representing the probability of it appearing.
-- Each value is written as <value>. In other words, the value is contained between < and >
+- Each value and probabikity is separated by a single space (` `).
+- Each value is written as `<value>`. In other words, the value is contained between < and >.
 - Each probability is written either as a real number (format 0.000... or 0,000...) or as a fraction (format 0/0).
   
 Here is an example of valid input:
@@ -47,3 +48,17 @@ The output is as follows:
 - First, the original input description is printed, sorted so the probabilities are descending.
 - Then, the coder does its job and codes every stochastic element, showing the sign and its respective code.
 - Finally, the median code length is printed, as well as the efficiency of the Shannon-Fano code.
+
+An example of output for `abcde` is as follows:
+
+```
+<a> 0.2
+<b> 0.2
+<c> 0.2
+<d> 0.2
+<e> 0.2
+
+The Shannon-Fano code is as follows:
+
+
+```
