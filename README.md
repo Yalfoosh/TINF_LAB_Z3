@@ -6,10 +6,11 @@ This is the C# implementation of the Shannon-Fano coder for the aforementioned c
 
 There are two types of input: sample and description. The entry point of the program is in EntryPoint.cs.
 
-# Sample imput
+## Sample imput
 
 The user enters a string that statistically represents the model of the coder input. For an example, the user inputs "Hakuna matata" as input. This will equate to:
 
+```
 <a> 5/13
 <t> 2/13
 < > 1/13
@@ -18,8 +19,9 @@ The user enters a string that statistically represents the model of the coder in
 <m> 1/13
 <n> 1/13
 <u> 1/13
+```
 
-# Description input
+## Description input
 
 The user can enter the description of the input in a format similar to the one above. The rules are as follows:
 
@@ -27,6 +29,16 @@ The user can enter the description of the input in a format similar to the one a
 - Each stochastic element has exactly one char as the value and a number representing the probability of it appearing.
 - Each value is written as <value>. In other words, the value is contained between < and >
 - Each probability is written either as a real number (format 0.000... or 0,000...) or as a fraction (format 0/0).
+  
+Here is an example of valid input:
+
+```
+<a> 0.5;
+<b> 0,25;
+<c> 1/4
+```
+  
+Although the program should check whether or not the input is valid and normalize it, it does not, since it's expected that the user takes care of that.
 
 # Output
 
