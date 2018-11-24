@@ -14,7 +14,7 @@ The user enters a string that statistically represents the model of the coder in
 <a> 5/13
 <t> 2/13
 < > 1/13
-<h> 1/13
+<H> 1/13
 <k> 1/13
 <m> 1/13
 <n> 1/13
