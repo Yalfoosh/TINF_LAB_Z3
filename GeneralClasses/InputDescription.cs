@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TINF_Lab.StatisticsClasses;
 
-namespace TINF_Lab
+namespace TINF_Lab.GeneralClasses
 {
     public class InputDescription
     {

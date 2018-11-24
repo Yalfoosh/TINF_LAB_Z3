@@ -3,8 +3,9 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    
-    namespace TINF_Lab.StatisticsClasses
+    using TINF_Lab.GeneralClasses;
+
+namespace TINF_Lab.StatisticsClasses
     {
         public class RandomVariable<T> : IEnumerable<StochasticElement<T>>
         {

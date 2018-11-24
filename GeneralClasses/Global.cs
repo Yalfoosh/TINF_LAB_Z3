@@ -1,6 +1,6 @@
 ﻿// ReSharper disable InconsistentNaming
 
-namespace TINF_Lab
+namespace TINF_Lab.GeneralClasses
 {
     public static class Global
     {

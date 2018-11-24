@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using TINF_Lab.GeneralClasses;
 using TINF_Lab.ShannonFanoClasses;
 
 namespace TINF_Lab

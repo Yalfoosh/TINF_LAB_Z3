@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TINF_Lab.GeneralClasses;
 
 namespace TINF_Lab.StatisticsClasses
 {

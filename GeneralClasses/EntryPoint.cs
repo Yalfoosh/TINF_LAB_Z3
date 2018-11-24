@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace TINF_Lab
+namespace TINF_Lab.GeneralClasses
 {
     internal static class EntryPoint
     {

@@ -4,13 +4,30 @@
         <name>ShannonFanoCoder</name>
     </assembly>
     <members>
-        <member name="M:TINF_Lab.InputDescription.#ctor(System.String)">
+        <member name="M:TINF_Lab.GeneralClasses.EntryPoint.Help">
+            <summary>
+            Method that prints out the help dialogue in console.
+            </summary>
+        </member>
+        <member name="M:TINF_Lab.GeneralClasses.EntryPoint.Exit(System.Int32)">
+            <summary>
+            Method that exits the program with the exit code exitCode (default 0).
+            </summary>
+            <param name="exitCode">The exit code you wish to exit the program with.</param>
+        </member>
+        <member name="M:TINF_Lab.GeneralClasses.EntryPoint.AwaitCommand">
+            <summary>
+            Method that listens to the user and does a command when it recognises it.
+            </summary>
+            <returns>The input description if one is entered.</returns>
+        </member>
+        <member name="M:TINF_Lab.GeneralClasses.InputDescription.#ctor(System.String)">
             <summary>
             Constructor for InputDescription.
             </summary>
             <param name="sample">The sample string containing the input description.</param>
         </member>
-        <member name="M:TINF_Lab.InputDescription.ParseFromSample(System.String)">
+        <member name="M:TINF_Lab.GeneralClasses.InputDescription.ParseFromSample(System.String)">
             <summary>
             Method that parses the input description from a textual sample of a message.
             </summary>
@@ -18,7 +35,7 @@
             <returns>A hashset of stochastic elements representing the input description of the message.</returns>
             <exception cref="T:System.ArgumentException">Thrown when sample is not in the correct format.</exception>
         </member>
-        <member name="M:TINF_Lab.InputDescription.ParseValues(System.String)">
+        <member name="M:TINF_Lab.GeneralClasses.InputDescription.ParseValues(System.String)">
             <summary>
             Method that parses the input description from a set of delimited stochastic elements.
             </summary>
@@ -26,29 +43,19 @@
             <returns>A hashset of stochastic elements representing the input description of a given system.</returns>
             <exception cref="T:System.ArgumentException">Thrown when the format of the description is invalid.</exception>
         </member>
-        <member name="M:TINF_Lab.InputDescription.GetOrdered(System.Boolean)">
+        <member name="M:TINF_Lab.GeneralClasses.InputDescription.GetOrdered(System.Boolean)">
             <summary>
             Method that gets the ordered stochastic elements, by default with descending probabilities.
             </summary>
             <param name="ascendingProbability">True if this should return ascending probabilities, false otherwise.</param>
             <returns>The list of stochastic elements ordered by probability.</returns>
         </member>
-        <member name="M:TINF_Lab.EntryPoint.Help">
+        <member name="M:TINF_Lab.ShannonFanoCoder.#ctor(TINF_Lab.GeneralClasses.InputDescription)">
             <summary>
-            Method that prints out the help dialogue in console.
+            Constructor for the Shannon Fano Coder.
             </summary>
-        </member>
-        <member name="M:TINF_Lab.EntryPoint.Exit(System.Int32)">
-            <summary>
-            Method that exits the program with the exit code exitCode (default 0).
-            </summary>
-            <param name="exitCode">The exit code you wish to exit the program with.</param>
-        </member>
-        <member name="M:TINF_Lab.EntryPoint.AwaitCommand">
-            <summary>
-            Method that listens to the user and does a command when it recognises it.
-            </summary>
-            <returns>The input description if one is entered.</returns>
+            <param name="description">The input description you're going to be coding for.</param>
+            <exception cref="T:System.ArgumentNullException">Throws if the input description is null.</exception>
         </member>
         <member name="M:TINF_Lab.ShannonFanoClasses.CodeClass`1.#ctor(TINF_Lab.ShannonFanoClasses.Group{`0})">
             <summary>
@@ -158,13 +165,6 @@
             Method that splits the Group into two groups of roughly the same probability sum.
             </summary>
             <returns>The list of Groups with 2 elements, each of which represents a 0-group and a 1-group.</returns>
-        </member>
-        <member name="M:TINF_Lab.ShannonFanoCoder.#ctor(TINF_Lab.InputDescription)">
-            <summary>
-            Constructor for the Shannon Fano Coder.
-            </summary>
-            <param name="description">The input description you're going to be coding for.</param>
-            <exception cref="T:System.ArgumentNullException">Throws if the input description is null.</exception>
         </member>
         <member name="M:TINF_Lab.StatisticsClasses.LargePhrase.#ctor(TINF_Lab.StatisticsClasses.LargePhrase)">
             <summary>
