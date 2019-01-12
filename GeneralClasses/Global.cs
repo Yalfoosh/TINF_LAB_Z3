@@ -74,7 +74,7 @@ namespace TINF_Lab.GeneralClasses
 
             #region CodeClass
     
-                public const string CC_MEDIAN_CODE_LENGTH_STRING = "Median code word length = ";
+                public const string CC_MEDIAN_CODE_LENGTH_STRING = "Mean code word length = ";
                 public const string CC_CODE_EFFICIENCY_STRING = "Code efficiency: ";
     
             #endregion
@@ -88,7 +88,7 @@ namespace TINF_Lab.GeneralClasses
             #region RandomVariable
     
                 public const string RV_REMOVE_NONEXISTENT_ELEMENT_EXCEPTION =
-                    "Trying to remove an nonexistent element from random variable";
+                    "Trying to remove a nonexistent element from random variable";
 
                 public const string RV_INVALID_PROBABILITY_SUM_EXCEPTION =
                     "The probability sum of the random variable is invalid. You can enter a new description.";
