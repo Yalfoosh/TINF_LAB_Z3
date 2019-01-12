@@ -27,7 +27,7 @@ The user can enter the description of the input in a format similar to the one a
 
 - Each stochastic element is delimited by a semicolon (`;`).
 - Each stochastic element has exactly one char as the value and a number representing the probability of it appearing.
-- Each value and probabikity is separated by a single space (` `).
+- Each value and probability is separated by a single space (` `).
 - Each value is written as `<value>`. In other words, the value is contained between < and >.
 - Each probability is written either as a real number (format 0.000... or 0,000...) or as a fraction (format 0/0).
   
@@ -81,7 +81,7 @@ For the given description, the Shannon Fano code is:
 <d>    ->    110
 <e>    ->    111
 
-Median code word length = 2,400
+Mean code word length = 2,400
 Code efficiency: 96,747%
 ----------------------------------------------------------------------
 ```
@@ -145,7 +145,7 @@ For the given description, the Shannon Fano code is:
 <I>    ->    11111110
 <w>    ->    11111111
 
-Median code word length = 3,756
+Mean code word length = 3,756
 Code efficiency: 98,836%
 ----------------------------------------------------------------------
 ```
